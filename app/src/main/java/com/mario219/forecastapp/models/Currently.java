@@ -8,7 +8,7 @@ public class Currently {
 
     @SerializedName("time")
     @Expose
-    private int time;
+    private double time;
     @SerializedName("summary")
     @Expose
     private String summary;
@@ -44,10 +44,10 @@ public class Currently {
     private double windGust;
     @SerializedName("windBearing")
     @Expose
-    private int windBearing;
+    private double windBearing;
     @SerializedName("visibility")
     @Expose
-    private int visibility;
+    private double visibility;
     @SerializedName("cloudCover")
     @Expose
     private double cloudCover;
@@ -61,11 +61,11 @@ public class Currently {
     @Expose
     private int uvIndex;
 
-    public int getTime() {
+    public double getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(double time) {
         this.time = time;
     }
 
@@ -157,19 +157,19 @@ public class Currently {
         this.windGust = windGust;
     }
 
-    public int getWindBearing() {
+    public double getWindBearing() {
         return windBearing;
     }
 
-    public void setWindBearing(int windBearing) {
+    public void setWindBearing(double windBearing) {
         this.windBearing = windBearing;
     }
 
-    public int getVisibility() {
+    public double getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(int visibility) {
+    public void setVisibility(double visibility) {
         this.visibility = visibility;
     }
 

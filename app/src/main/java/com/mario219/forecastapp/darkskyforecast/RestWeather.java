@@ -2,6 +2,7 @@ package com.mario219.forecastapp.darkskyforecast;
 
 import android.util.Log;
 
+import com.mario219.forecastapp.R;
 import com.mario219.forecastapp.models.Forecast;
 
 import retrofit2.Call;
@@ -37,17 +38,14 @@ public class RestWeather {
 
             @Override
             public void onResponse(Call<Forecast> call, Response<Forecast> response) {
-
-                    Log.i(TAG, "HEEEEEEEEE 1" + response.toString());
-                    Log.i(TAG, response.body().getDaily().getSummary().toString());
-
-                //callback.onRequestCompleted(response.body().getDaily().getSummary().toString());
+                Log.i(TAG, response.toString());
+                callback.onRequestCompleted(response.body());
             }
 
             @Override
             public void onFailure(Call<Forecast> call, Throwable t) {
                 t.printStackTrace();
-                Log.i(TAG, "HEEEEEEEEE 3");
+                callback.onRequestFailure(""+R.string.messageInfo);
             }
         });
     }

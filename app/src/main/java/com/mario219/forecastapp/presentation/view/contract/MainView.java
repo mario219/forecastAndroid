@@ -6,6 +6,8 @@ package com.mario219.forecastapp.presentation.view.contract;
 
 public interface MainView {
 
-    void onWeatherRequestSucceded(String message);
+    void onWeatherRequestSucceded(String temperature, String summary, String hummidity);
+    void onWeatherRequestFailure(String message);
+    void launchGPSSettings();
 
 }
